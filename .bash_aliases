@@ -60,6 +60,6 @@ alias lbin='cd $HOME/.local/bin'
 
 alias merge='xrdb -merge $HOME/.Xresources'
 alias mall='make clean && make && doas make install'
-
+alias xev='xev -rv'
 
 alias config='/usr/bin/git --git-dir=/home/david/.cfg/ --work-tree=/home/david'
