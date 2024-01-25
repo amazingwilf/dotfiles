@@ -62,4 +62,7 @@ alias merge='xrdb -merge $HOME/.Xresources'
 alias mall='make clean && make && doas make install'
 alias xev='xev -rv'
 
-alias config='/usr/bin/git --git-dir=/home/david/.cfg/ --work-tree=/home/david'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias confadd='config add'
+alias confcom='config commit -m'
+alias confpush='config push origin master'
