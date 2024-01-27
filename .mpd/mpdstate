@@ -1,9 +1,9 @@
-sw_volume: 100
+sw_volume: 98
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
-state: pause
-current: 0
-time: 0.000000
+state: play
+current: 27
+time: 120.024000
 random: 0
 repeat: 1
 single: 0
@@ -12,9 +12,35 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:NEFFEX - Grateful [Copyright Free].mp3
-1:Cartoon - On & On (feat. Daniel Levi) [NCS Release].mp3
-2:Culture Code - Make Me Move (feat. Karra) [NCS Release].mp3
-3:Janji - Heroes Tonight (feat. Johnning) [NCS Release].mp3
-4:N3WPORT - Power (feat. braev) [NCS Release].mp3
+0:Big Big Train/English Electric Part 1/02 Uncle Jack.mp3
+1:Big Big Train/Grimspound (hi resolution audio)/01 Brave Captain.mp3
+2:Big Big Train/Grimspound (hi resolution audio)/02 On the Racing Line.mp3
+3:Big Big Train/Grimspound (hi resolution audio)/03 Experimental Gentlemen.mp3
+4:Big Big Train/Grimspound (hi resolution audio)/04 Meadowland.mp3
+5:Big Big Train/Grimspound (hi resolution audio)/05 Grimspound.mp3
+6:Big Big Train/Grimspound (hi resolution audio)/06 The Ivy Gate.mp3
+7:Big Big Train/Grimspound (hi resolution audio)/07 A Mead Hall in Winter.mp3
+8:Big Big Train/Grimspound (hi resolution audio)/08 As the Crow Flies.mp3
+9:Big Big Train/The Underfall Yard (2021 edition)/1-01 Evening Star.mp3
+10:Big Big Train/The Underfall Yard (2021 edition)/1-02 Master James Of St George.mp3
+11:Big Big Train/The Underfall Yard (2021 edition)/1-04 Last Train.mp3
+12:Big Big Train/The Underfall Yard (2021 edition)/1-06 The Underfall Yard.mp3
+13:Big Big Train/The Underfall Yard (2021 edition)/2-07 Songs From The Shoreline.mp3
+14:Big Big Train/The Underfall Yard (2021 edition)/2-10 Brew and Burgh.mp3
+15:Big Big Train/The Likes Of Us/01 - Light Left In The Day .mp3
+16:Big Big Train/The Likes Of Us/02 - Oblivion .mp3
+17:Big Big Train/The Likes Of Us/03 - Beneath The Masts .mp3
+18:Big Big Train/The Likes Of Us/04 - Skates On .mp3
+19:Big Big Train/The Likes Of Us/05 - Miramare .mp3
+20:Big Big Train/The Likes Of Us/06 - Love Is The Light .mp3
+21:Big Big Train/The Likes Of Us/07 - Bookmarks .mp3
+22:Big Big Train/The Likes Of Us/08 - Last Eleven .mp3
+23:Big Big Train/Far Skies Deep Time (2018 remaster)/01 Kingmaker.mp3
+24:Big Big Train/The Likes Of Us/02 - Oblivion .mp3
+25:Big Big Train/The Likes Of Us/03 - Beneath The Masts .mp3
+26:Big Big Train/The Likes Of Us/04 - Skates On .mp3
+27:Big Big Train/The Likes Of Us/05 - Miramare .mp3
+28:Big Big Train/The Likes Of Us/06 - Love Is The Light .mp3
+29:Big Big Train/The Likes Of Us/07 - Bookmarks .mp3
+30:Big Big Train/The Likes Of Us/08 - Last Eleven .mp3
 playlist_end
