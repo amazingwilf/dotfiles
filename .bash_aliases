@@ -28,7 +28,10 @@ alias l='exa -lah --color=always --group-directories-first --icons' # tree listi
 
 alias na='$EDITOR $HOME/.bash_aliases'
 alias nb='$EDITOR $HOME/.bashrc'
+alias nbs='$EDITOR $HOME/.config/bspwm/bspwmrc'
 alias nd='$EDITOR $HOME/.local/src/dwm/config.def.h'
+alias np='$EDITOR $HOME/.config/polybar/config.ini'
+alias ns='$EDITOR $HOME/.config/sxhkd/sxhkdrc'
 alias nx='$EDITOR $HOME/.Xresources'
 
 alias c='clear'
