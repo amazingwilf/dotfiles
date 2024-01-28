@@ -67,5 +67,5 @@ alias xev='xev -rv'
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias confadd='config add'
-alias confcom='config commit -m'
+alias confcom='config commit -a -m'
 alias confpush='config push origin master'
