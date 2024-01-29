@@ -53,6 +53,9 @@ alias gc='git commit -m'
 alias gp='git push origin master'
 alias gs='git status'
 
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
+
 alias dlds='cd $HOME/Downloads'
 alias docs='cd $HOME/Documents'
 alias src='cd $HOME/.local/src'
