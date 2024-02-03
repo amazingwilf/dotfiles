@@ -20,7 +20,7 @@
 #define c14 #56b6c2
 #define c15 #c8ccd4
 
-#define accent #0000b0
+#define accent #004466
 
 *.foreground:   fg
 *.background:   bg
@@ -56,7 +56,7 @@ dmenu.background:           c00
 dmenu.selforeground:        c03
 dmenu.selbackground:        accent
 dmenu.bordercolor:          c04
-dmenu.font:                 Aptos Medium:size=14
+dmenu.font:                 Aptos Medium:size=15
 
 dwm.normfgcolor:            fg
 dwm.normbgcolor:            c00
@@ -68,20 +68,15 @@ dwm.selbgcolor:             c00
 dwm.selbordercolor:         c04
 dwm.selfloatcolor:          c05
 
-dwm.tagsnormfgcolor:        c08
-dwm.tagsnormbgcolor:        c00
-dwm.tagsnormbordercolor:    c08
-dwm.tagsnormfloatcolor:     c08
+dwm.stickyfgcolor:          fg
+dwm.stickybgcolor:          c00
+dwm.stickybordercolor:      c01
+dwm.stickyfloatcolor:       c01
 
-dwm.tagsoccfgcolor:         c05
-dwm.tagsoccbgcolor:         c00
-dwm.tagsoccbordercolor:     c08
-dwm.tagsoccfloatcolor:      c08
-
-dwm.tagsselfgcolor:         c15
-dwm.tagsselbgcolor:         c00
-dwm.tagsselbordercolor:     c04
-dwm.tagsselfloatcolor:      c05
+dwm.urgfgcolor:             c15
+dwm.urgbgcolor:             #aa0000
+dwm.urgbordercolor:         c00
+dwm.urgfloatcolor:          c00
 
 dwm.titlenormfgcolor:       fg
 dwm.titlenormbgcolor:       c00
@@ -93,6 +88,16 @@ dwm.titleselbgcolor:        c00
 dwm.titleselbordercolor:    c00
 dwm.titleselfloatcolor:     c00
 
+dwm.tagsnormfgcolor:        c06
+dwm.tagsnormbgcolor:        c00
+dwm.tagsnormbordercolor:    c08
+dwm.tagsnormfloatcolor:     c08
+
+dwm.tagsselfgcolor:         c15
+dwm.tagsselbgcolor:         c00
+dwm.tagsselbordercolor:     c04
+dwm.tagsselfloatcolor:      c05
+
 dwm.scratchnormfgcolor:     fg
 dwm.scratchnormbgcolor:     c00
 dwm.scratchnormbordercolor: c08
@@ -103,7 +108,7 @@ dwm.scratchselbgcolor:      c00
 dwm.scratchselbordercolor:  c02
 dwm.scratchselfloatcolor:   c02
 
-dwm.ltsymbolfgcolor:        c03
+dwm.ltsymbolfgcolor:        c05
 dwm.ltsymbolbgcolor:        c00
 dwm.ltsymbolbordercolor:    c00
 dwm.ltsymbolfloatcolor:     c00
