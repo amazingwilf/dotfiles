@@ -1,0 +1,62 @@
+! .Xresources - DWM colours
+
+dwm.normfgcolor:            base05
+dwm.normbgcolor:            base00
+dwm.normbordercolor:        base02
+dwm.normfloatcolor:         base02
+
+dwm.selfgcolor:             base07
+dwm.selbgcolor:             base00
+dwm.selbordercolor:         base0D
+dwm.selfloatcolor:          base0E
+
+dwm.stickyfgcolor:          base05
+dwm.stickybgcolor:          base00
+dwm.stickybordercolor:      base08
+dwm.stickyfloatcolor:       base08
+
+dwm.urgfgcolor:             base07
+dwm.urgbgcolor:             #aa0000
+dwm.urgbordercolor:         base00
+dwm.urgfloatcolor:          base00
+
+dwm.titlenormfgcolor:       base07
+dwm.titlenormbgcolor:       base00
+dwm.titlenormbordercolor:   base00
+dwm.titlenormfloatcolor:    base00
+
+dwm.titleselfgcolor:        base07
+dwm.titleselbgcolor:        base00
+dwm.titleselbordercolor:    base00
+dwm.titleselfloatcolor:     base00
+
+dwm.tagsnormfgcolor:        base0C
+dwm.tagsnormbgcolor:        base00
+dwm.tagsnormbordercolor:    base00
+dwm.tagsnormfloatcolor:     base00
+
+dwm.tagsselfgcolor:         base007
+dwm.tagsselbgcolor:         base00
+dwm.tagsselbordercolor:     base00
+dwm.tagsselfloatcolor:      base00
+
+dwm.scratchnormfgcolor:     base05
+dwm.scratchnormbgcolor:     base00
+dwm.scratchnormbordercolor: base00
+dwm.scratchnormfloatcolor:  base00
+
+dwm.scratchselfgcolor:      base07
+dwm.scratchselbgcolor:      base00
+dwm.scratchselbordercolor:  base0B
+dwm.scratchselfloatcolor:   base0B
+
+dwm.ltsymbolfgcolor:        base0A
+dwm.ltsymbolbgcolor:        base00
+dwm.ltsymbolbordercolor:    base00
+dwm.ltsymbolfloatcolor:     base00
+
+dwm.stbuttonfgcolor:        base0D
+dwm.stbuttonbgcolor:        base00
+dwm.stbuttonbordercolor:    base00
+dwm.stbuttonfloatcolor:     base00
+
