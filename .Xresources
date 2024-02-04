@@ -2,6 +2,7 @@
 
 #include ".Xresources.d/themes/onedark.xrdb"
 #include ".Xresources.d/general.xrdb"
+#include ".Xresources.d/colors.xrdb"
 #include ".Xresources.d/dwm.xrdb"
 #include ".Xresources.d/dmenu.xrdb"
 #include ".Xresources.d/st.xrdb"
