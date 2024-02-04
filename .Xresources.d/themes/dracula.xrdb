@@ -1,4 +1,4 @@
-#define base00 #101010 
+#define base00 #000000
 #define base01 #3a3c4e
 #define base02 #4d4f68
 #define base03 #626483
