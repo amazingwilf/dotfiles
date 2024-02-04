@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+st -c 'Music,Music' -e ~/.ncmpcpp/scripts/ncmpcpp-art
