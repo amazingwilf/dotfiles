@@ -12,8 +12,8 @@ dwm.selfloatcolor:          base0E
 
 dwm.stickyfgcolor:          base05
 dwm.stickybgcolor:          base00
-dwm.stickybordercolor:      base08
-dwm.stickyfloatcolor:       base08
+dwm.stickybordercolor:      base0A
+dwm.stickyfloatcolor:       base0A
 
 dwm.urgfgcolor:             base07
 dwm.urgbgcolor:             #aa0000

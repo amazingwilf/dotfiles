@@ -1,6 +1,6 @@
 ! .Xresources
 
-#include ".Xresources.d/themes/onedark.xrdb"
+#include ".Xresources.d/themes/wez.xrdb"
 #include ".Xresources.d/general.xrdb"
 #include ".Xresources.d/colors.xrdb"
 #include ".Xresources.d/dwm.xrdb"
