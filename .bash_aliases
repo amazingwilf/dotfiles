@@ -13,6 +13,9 @@ alias akring='doas pacman -Sy archlinux-keyring --noconfirm'
 alias info='pacman -Si'
 alias infox='pacman -Sii'
 
+alias apt='doas apt'
+alias nala='doas nala'
+
 alias ..='cd ..'
 alias ...='cd ../../'
 
