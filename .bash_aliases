@@ -67,7 +67,7 @@ alias omz='cd $HOME/.oh-my-zsh'
 alias suck='cd $HOME/suckless'
 alias lbin='cd $HOME/.local/bin'
 
-alias merge='xrdb -merge $HOME/.Xresources && dwmc xrdb'
+alias merge='xrdb -merge $HOME/.Xresources'
 alias mall='make clean && make && doas make install'
 alias xev='xev -rv'
 
