@@ -26,7 +26,7 @@ dwm.titlenormbordercolor:   base00
 dwm.titlenormfloatcolor:    base00
 
 dwm.titleselfgcolor:        base07
-dwm.titleselbgcolor:        base0F
+dwm.titleselbgcolor:        base00
 dwm.titleselbordercolor:    base00
 dwm.titleselfloatcolor:     base00
 
@@ -41,7 +41,7 @@ dwm.tagsoccbordercolor:     base00
 dwm.tagsoccfloatcolor:      base00
 
 dwm.tagsselfgcolor:         base0A
-dwm.tagsselbgcolor:         base0F
+dwm.tagsselbgcolor:         base00
 dwm.tagsselbordercolor:     base00
 dwm.tagsselfloatcolor:      base00
 
@@ -61,7 +61,7 @@ dwm.ltsymbolbordercolor:    base00
 dwm.ltsymbolfloatcolor:     base00
 
 dwm.stbuttonfgcolor:        base0D
-dwm.stbuttonbgcolor:        #aa0000
+dwm.stbuttonbgcolor:        base0F
 dwm.stbuttonbordercolor:    base00
 dwm.stbuttonfloatcolor:     base00
 
