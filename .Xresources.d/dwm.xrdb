@@ -26,17 +26,22 @@ dwm.titlenormbordercolor:   base00
 dwm.titlenormfloatcolor:    base00
 
 dwm.titleselfgcolor:        base07
-dwm.titleselbgcolor:        base00
+dwm.titleselbgcolor:        base0F
 dwm.titleselbordercolor:    base00
 dwm.titleselfloatcolor:     base00
 
-dwm.tagsnormfgcolor:        base0C
+dwm.tagsnormfgcolor:        base00
 dwm.tagsnormbgcolor:        base00
 dwm.tagsnormbordercolor:    base00
 dwm.tagsnormfloatcolor:     base00
 
-dwm.tagsselfgcolor:         base007
-dwm.tagsselbgcolor:         base00
+dwm.tagsoccfgcolor:         base0E
+dwm.tagsoccbgcolor:         base00
+dwm.tagsoccbordercolor:     base00
+dwm.tagsoccfloatcolor:      base00
+
+dwm.tagsselfgcolor:         base0A
+dwm.tagsselbgcolor:         base0F
 dwm.tagsselbordercolor:     base00
 dwm.tagsselfloatcolor:      base00
 
@@ -56,7 +61,7 @@ dwm.ltsymbolbordercolor:    base00
 dwm.ltsymbolfloatcolor:     base00
 
 dwm.stbuttonfgcolor:        base0D
-dwm.stbuttonbgcolor:        base00
+dwm.stbuttonbgcolor:        #aa0000
 dwm.stbuttonbordercolor:    base00
 dwm.stbuttonfloatcolor:     base00
 
