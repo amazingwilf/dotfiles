@@ -750,3 +750,5 @@ Feb 04 20:59 : player: played "Regal Worm/Pig Views/Regal Worm - Pig Views - 04 
 Feb 04 21:00 : player: played "Regal Worm/Pig Views/Regal Worm - Pig Views - 05 Jag Vet.mp3"
 Feb 04 21:08 : player: played "Regal Worm/Pig Views/Regal Worm - Pig Views - 07 Crystallisation.mp3"
 Feb 05 17:17 : output: Failed to play on "pulse audio" (pulse): failed to connect the stream: Input/Output error
+Feb 15 18:24 : exception: Failed to decode /home/david/Music/Regal Worm/Pig Views/Regal Worm - Pig Views - 07 Crystallisation.mp3; Failed to open '/home/david/Music/Regal Worm/Pig Views/Regal Worm - Pig Views - 07 Crystallisation.mp3': No such file or directory
+Feb 15 18:24 : player: played "Regal Worm/Pig Views/Regal Worm - Pig Views - 07 Crystallisation.mp3"

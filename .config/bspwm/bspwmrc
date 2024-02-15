@@ -3,7 +3,7 @@
 killall -9 polkit-gnome-authentication-agent-1 picom dunst polybar
 pgrep -x sxhkd > /dev/null || sxhkd &
 /usr/lib/polkit-gnome/polkit-authentication-agent-1 &
-nitrogen --restore
+feh --bg-fill /usr/share/backgrounds/image05.jpg
 dunst &
 mpd &
 picom -b
