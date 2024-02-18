@@ -11,4 +11,5 @@ eval $(keychain --eval id_ed25519)
 
 PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 fortune -s
-echo
+
+eval "$(starship init bash)"

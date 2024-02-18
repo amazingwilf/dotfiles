@@ -3,7 +3,7 @@
 [global]
 monitor = 0
 follow = mouse
-width = 300
+width = (0,450)
 height = 80
 origin = top-right
 offset = 10x47
@@ -21,12 +21,12 @@ separator_height = 2
 padding = 15
 horizontal_padding = 15
 text_icon_padding = 0
-frame_width = 2
+frame_width = 3
 gap_size = 0
 separator_color = frame
 sort = yes
 idle_threshold = 120
-font = Aptos 15
+font = Noto Sans 22
 line_height = 2
 markup = full
 format = %s\n%b
