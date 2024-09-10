@@ -1,27 +1,93 @@
-import = ["/home/david/.config/alacritty/colors.toml", "/home/david/.config/alacritty/fonts.toml"]
 live_config_reload = true
-
-[cursor]
-unfocused_hollow = false
-
-[cursor.style]
-blinking = "On"
-shape = "Block"
 
 [env]
 TERM = "alacritty"
-WINIT_X11_SCALE_FACTOR = "1.0"
 
 [window]
+position = "None"
+dynamic_padding = true
 decorations = "full"
-dynamic_title = true
-opacity = 0.75
+opacity = 0.85
+blur = false
 startup_mode = "Windowed"
+dynamic_title = true
+decorations_theme_variant = "None"
+
+[window.class]
+instance = "Alacritty"
+general = "Alacritty"
 
 [window.dimensions]
-columns = 90
-lines = 25
+columns = 82
+lines = 24
 
 [window.padding]
 x = 12
 y = 12
+
+[scrolling]
+history = 10_000
+multiplier = 3
+
+[cursor]
+vi_mode_style = "None"
+blink_interval = 750
+blink_timeout = 5
+unfocused_hollow = false
+thickness = 0.15
+
+[cursor.style]
+shape = "Block"
+blinking = "On"
+
+[font]
+size = 16
+builtin_box_drawing = true
+
+[font.normal]
+family = "CodeNewRoman Nerd Font"
+
+[font.bold]
+family = "CodeNewRoman Nerd Font"
+
+[font.italic]
+family = "CodeNewRoman Nerd Font"
+
+[font.bold_italic]
+family = "CodeNewRoman Nerd Font"
+
+[font.offset]
+x = 0
+y = 0
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[colors.primary]
+background = "#0E1415"
+foreground = "#CECECE"
+
+[colors.cursor]
+text = "#0E1415"
+cursor = "#CECECE"
+
+[colors.normal]
+black = "#0E1415"
+red = "#e25d56"
+green = "#73ca50"
+yellow = "#e9bf57"
+blue = "#4a88e4"
+magenta = "#915caf"
+cyan = "#23acdd"
+white = "#f0f0f0"
+
+[colors.bright]
+black = "#777777"
+red = "#f36868"
+green = "#88db3f"
+yellow = "#f0bf7a"
+blue = "#6f8fdb"
+magenta = "#e987e9"
+cyan = "#4ac9e2"
+white = "#FFFFFF"

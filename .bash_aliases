@@ -1,7 +1,7 @@
 export EDITOR=nvim
 export VISUAL=nvim
-export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
+# Arch Linux
 alias pacman='doas pacman'
 alias search='doas pacman -Qs'
 alias remove='doas pacman -Rcns'
@@ -14,8 +14,16 @@ alias akring='doas pacman -Sy archlinux-keyring --noconfirm'
 alias info='pacman -Si'
 alias infox='pacman -Sii'
 
-alias apt='doas apt'
+# Ubuntu
+alias apt='nala'
 alias nala='doas nala'
+
+# Void
+alias xbps-install='doas xbps-install'
+alias query='xbps-query -Rs'
+
+alias poweroff='doas poweroff'
+alias reboot='doas reboot'
 
 alias ..='cd ..'
 alias ...='cd ../../'
@@ -37,6 +45,7 @@ alias nd='$EDITOR $HOME/.local/src/dwm/config.def.h'
 alias np='$EDITOR $HOME/.config/polybar/config.ini'
 alias ns='$EDITOR $HOME/.config/sxhkd/sxhkdrc'
 alias nx='$EDITOR $HOME/.Xresources'
+alias nz='$EDITOR $HOME/.zshrc'
 
 alias c='clear'
 alias h='cd $HOME'
@@ -63,10 +72,7 @@ alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | n
 alias dlds='cd $HOME/Downloads'
 alias docs='cd $HOME/Documents'
 alias src='cd $HOME/.local/src'
-alias ddwm='cd $HOME/suckless/dwm'
 alias omz='cd $HOME/.oh-my-zsh'
-alias suck='cd $HOME/suckless'
-alias lbin='cd $HOME/.local/bin'
 
 alias merge='xrdb -merge $HOME/.Xresources'
 alias mall='make clean && make && doas make install'
