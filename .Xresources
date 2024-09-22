@@ -1,10 +1,58 @@
-! .Xresources
-
-#include ".Xresources.d/themes/onedark.xrdb"
-#include ".Xresources.d/general.xrdb"
 #include ".Xresources.d/colors.xrdb"
-#include ".Xresources.d/dwm.xrdb"
-#include ".Xresources.d/dmenu.xrdb"
-#include ".Xresources.d/st.xrdb"
 
+Xft.dpi:    144
+
+Xcursor.theme:  Bibata-Modern-Ice
+Xcursor.size:   44
+
+! DWM colours
+dwm.normfgcolor:            base06
+dwm.normbgcolor:            base00
+dwm.normbordercolor:        base03
+dwm.normfloatcolor:         base03
+
+dwm.selfgcolor:             base07
+dwm.selbgcolor:             base00
+dwm.selbordercolor:         base0D
+dwm.selfloatcolor:          base0E
+
+dwm.stickyfgcolor:          base06
+dwm.stickybgcolor:          base00
+dwm.stickybordercolor:      base0B
+dwm.stickyfloatcolor:       base0B
+
+dwm.scratchnormfgcolor:     base06
+dwm.scratchnormbgcolor:     base00
+dwm.scratchnormbordercolor: base03
+dwm.scratchnormfloatcolor:  base03
+
+dwm.scratchselfgcolor:      base06
+dwm.scratchselbgcolor:      base00
+dwm.scratchselbordercolor:  base0C
+dwm.scratchselfloatcolor:   base0C
+
+dwm.stbuttonfgcolor:        base0B
+dwm.stbuttonbgcolor:        base00
+dwm.stbuttonbordercolor:    base00
+dwm.stbuttonfloatcolor:     base00
+
+dwm.ltsymbolfgcolor:        base0B
+dwm.ltsymbolbgcolor:        base00
+dwm.ltsymbolbordercolor:    base00
+dwm.ltsymbolfloatcolor:     base00
+
+dwm.tagsemptyfgcolor:       base03
+dwm.tagsemptybgcolor:       base00
+dwm.tagsemptybordercolor:   base00
+dwm.tagsemptyfloatcolor:    base00
+
+dwm.tagsoccfgcolor:         base06
+dwm.tagsoccbgcolor:         base00
+dwm.tagsoccbordercolor:     base00
+dwm.tagsoccfloatcolor:      base00
+
+dwm.tagsselfgcolor:         base07
+dwm.tagsselbgcolor:         base00
+dwm.tagsbordercolor:        base00
+dwm.tagsfloatcolor:         base00
 
