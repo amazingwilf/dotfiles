@@ -1,0 +1,8 @@
+theme = "catppuccin-mocha"
+font-size = 12
+window-decoration = false
+cursor-style = block
+adjust-cursor-thickness = 3
+background-opacity = 0.79
+window-padding-x = 8
+window-padding-y = 8

@@ -1,7 +1,6 @@
 export EDITOR=nvim
 export VISUAL=nvim
 
-# Arch Linux
 alias pacman='doas pacman'
 alias search='doas pacman -Qs'
 alias remove='doas pacman -Rcns'
@@ -13,17 +12,6 @@ alias orphans='doas pacman -Rns $(pacman -Qtdq)'
 alias akring='doas pacman -Sy archlinux-keyring --noconfirm'
 alias info='pacman -Si'
 alias infox='pacman -Sii'
-
-# Ubuntu
-alias apt='nala'
-alias nala='doas nala'
-
-# Void
-alias xbps-install='doas xbps-install'
-alias query='xbps-query -Rs'
-
-alias poweroff='doas poweroff'
-alias reboot='doas reboot'
 
 alias ..='cd ..'
 alias ...='cd ../../'
