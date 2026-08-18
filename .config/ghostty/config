@@ -1,0 +1,12 @@
+theme = "Catppuccin Mocha"
+background = #000000
+font-family = "IosevkaTerm Nerd Font"
+font-size = 12
+title = Terminal
+window-decoration = false
+cursor-style = block
+adjust-cursor-thickness = 3
+shell-integration-features = no-cursor
+background-opacity = 0.75
+window-padding-x = 8
+window-padding-y = 8
