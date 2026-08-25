@@ -9,6 +9,3 @@
 
 PS1='[\u@\h \W]\$ '
 
-cowsay `fortune -s` 
-echo
-

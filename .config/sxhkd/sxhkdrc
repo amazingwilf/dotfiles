@@ -6,7 +6,7 @@
 
 # Terminal (alacritty)
 super + Return
-	kitty --title Terminal
+	ghostty
 
 # Rofi App Launcher
 alt + F1

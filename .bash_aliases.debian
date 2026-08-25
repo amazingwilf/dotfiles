@@ -1,9 +1,9 @@
-alias pacman='doas pacman'
-alias update='pacman -Syy'
-alias upgrade='pacman -Syu'
+alias apt='doas apt'
+alias update='apt update'
+alias upgrade='apt dist-upgrade'
 
-alias poweroff='doas poweroff'
-alias reboot='doas reboot'
+alias poweroff='doas /sbin/poweroff'
+alias reboot='doas /sbin/reboot'
 
 alias ..='cd ..'
 alias ...='cd ../../'
@@ -43,9 +43,6 @@ alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push origin master'
 alias gs='git status'
-
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 
 alias merge='xrdb -merge $HOME/.Xresources'
 alias mall='make clean && make && doas make install'
