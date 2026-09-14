@@ -1,0 +1,147 @@
+/* =========================================================
+ * mangobar style (only modules/properties this bar supports)
+ *
+ * Modules: bar / tags / layout / title / overview /
+ *          clock / cpu / mem / brightness / volume /
+ *          network / keymode / keyboardlayout / tray / custom-<name>
+ * Tag states: tags.active / tags.occupied / tags.urgent / tags.empty
+ * Properties: color / background / padding / margin / border-radius /
+ *             min-width / font-family / font-size / font-weight
+ * ========================================================= */
+
+/* ==================== Font ==================== */
+/* font-family / font-size / font-weight.
+ * The config.jsonc "font" value is the fallback when CSS sets no font. */
+* {
+    font-family: "Noto Sans Regular";
+    font-size: 16px;
+    /* font-weight: bold; */
+}
+
+* {
+    color: #ebdbb2;
+    background-color: #181818;
+    padding: 0px 10px;
+    /* margin: 5px 1px; */
+    /* border-radius: 100px; */
+}
+
+#bar {
+    background-color: #181818;
+    /* margin: 5px 10px; */
+}
+#bar.sel {
+    background-color: #181818;
+}
+
+#tags {
+    padding: 0px 13px;
+    margin: 0px 2px;
+    background: #181818;
+}
+
+#tags.active {
+    color: #83a598;
+    background-color: #0000b0;
+}
+#tags.occupied {
+    background-color: #101010;
+    color: #62AEEF;
+}
+#tags.urgent {
+    background-color: #fb4934;
+    color: #1b1a1a;
+}
+#tags.empty {
+    background-color: #1b1a1a;
+    color: #0000b0;
+}
+
+/* Overview mode */
+#overview {
+    background-color: #900000;
+    color: #eeeeee;
+}
+
+/* Layout symbol */
+#layout {
+    color: #EA757E;
+    background-color: #1b1a1a;
+    min-width: 34px;
+    margin: 5px 5px;
+}
+
+/* Window title */
+#title {
+    /* background-color: #eeeeee; */
+    background-color: #101010;
+    /* color: #111111; */
+    color: #dcddcc;
+}
+
+/* Right-side system modules */
+#clock {
+    font-family: "Noto Sans Regular";
+    color: #5FC0CC;
+    background-color: #101010;
+}
+/* Date module (clock#date), separate from time */
+#clock.date {
+    background-color: #b8bb26;
+    color: #1b1a1a;
+}
+#cpu {
+    padding: 0px 15px;
+    background-color: #c4b595;
+    color: #1b1a1a;
+}
+#mem {
+    background-color: #83a598;
+    color: #1b1a1a;
+}
+#brightness {
+    color: #dddd00;
+    background-color: #1b1a1a;
+}
+#volume {
+    color: #A2CD83;
+    background-color: #1b1a1a;
+}
+#network {
+    background-color: #b8bb26;
+    color: #1b1a1a;
+}
+#keymode {
+    background-color: #83a598;
+    color: #1b1a1a;
+}
+#keyboardlayout {
+    background-color: #bd788a;
+    color: #1b1a1a;
+}
+
+/* Custom modules use #custom-<name> (e.g. custom/power -> #custom-power) */
+#custom-power {
+    margin: 0px 5px;
+    background-color: #90AD9D;
+    color: #000000;
+}
+
+#tray {
+    background-color: #6B645A;
+    padding: 0px 15px;
+}
+
+menu {
+    background-color: #201B14;
+    border-color: #ebdbb2;
+    border-radius: 10px;
+    font-size: 14px;
+}
+menuitem {
+    color: #ebdbb2;
+}
+menuitem:hover {
+    color: #1b1a1a;
+    background-color: #b8bb26;
+}

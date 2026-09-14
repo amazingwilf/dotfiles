@@ -1,9 +1,9 @@
-alias xbps-install='doas xbps-install'
-alias update='xbps-install -Su'
-alias query='xbps-query -Rs'
+export EDITOR=nvim
+export VISUAL=nvim
 
-alias poweroff='doas poweroff'
-alias reboot='doas reboot'
+alias pacman='doas pacman'
+alias update='pacman -Syy'
+alias query='pacman -Syu'
 
 alias ..='cd ..'
 alias ...='cd ../../'
