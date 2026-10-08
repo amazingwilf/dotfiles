@@ -1,9 +1,21 @@
-alias apt='doas apt'
-alias update='apt update'
-alias upgrade='apt dist-upgrade'
+export EDITOR=nvim
+export VISUAL=nvim
+export ADW_DISABLE_PORTAL=1
 
-alias poweroff='doas /sbin/poweroff'
-alias reboot='doas /sbin/reboot'
+alias pacman='doas pacman'
+alias update='pacman -Syy'
+alias query='pacman -Syu'
+
+alias list='pacman -Qqe'		# explicitly installed
+alias listt='pacman -Qqet'		# as above, no deps
+alias listaur='pacman -Qqem'	# AUR packages
+
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 
 alias ..='cd ..'
 alias ...='cd ../../'
@@ -21,8 +33,8 @@ alias l='exa -lah --color=always --group-directories-first --icons=always'
 alias na='$EDITOR $HOME/.bash_aliases'
 alias nb='$EDITOR $HOME/.bashrc'
 alias nd='$EDITOR $HOME/Projects/dwm/config.def.h'
-alias ng='$EDITOR $HOME/.config/ghostty/config'
-alias nr='$EDITOR $HOME/.config/rofi/config.rasi'
+alias ng='$EDITOR $HOME/.config/ghostty/config.ghostty'
+alias nm='$EDITOR $HOME/.config/mango/config.conf'
 alias nx='$EDITOR $HOME/.Xresources'
 
 alias c='clear'
@@ -47,6 +59,9 @@ alias gs='git status'
 alias merge='xrdb -merge $HOME/.Xresources'
 alias mall='make clean && make && doas make install'
 alias xev='xev -rv'
+alias df='df -h'
+alias free='free -mt'
+alias wget='wget -c'
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias confadd='config add'
