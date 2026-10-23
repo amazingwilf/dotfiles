@@ -4,7 +4,7 @@ export ADW_DISABLE_PORTAL=1
 
 alias pacman='doas pacman'
 alias update='pacman -Syy'
-alias query='pacman -Syu'
+alias upgrade='pacman -Syu'
 
 alias list='pacman -Qqe'		# explicitly installed
 alias listt='pacman -Qqet'		# as above, no deps
