@@ -22,7 +22,7 @@ shadows_position_x     = 0
 shadows_position_y     = 0
 shadows_color          = 0x000000ff
 border_radius          = 20
-no_radius_when_single  = 1
+no_radius_when_single  = 0
 focused_opacity        = 1.0
 unfocused_opacity      = 1.0
 dim_enable             = 0
@@ -70,7 +70,7 @@ new_is_master         = 0
 default_master_factor = 0.55
 default_master_count  = 1
 tag_num               = 9
-smart_gaps            = 1
+smart_gaps            = 0
 
 # Dwindle Layout Setting
 dwindle_smart_split       = 0
@@ -82,8 +82,8 @@ dwindle_preserve_split    = 0
 
 # Monocle Layout Setting
 monocle_tab_mode  = 1
-monocle_no_border = 0
-monocle_no_gap    = 0
+monocle_no_border = 1
+monocle_no_gap    = 1
 
 # Deck Layout Setting
 deck_tab_mode = 1
@@ -99,7 +99,7 @@ title_message_bar_height      = 52
 title_message_bar_gap         = 20
 
 # Misc
-no_border_when_single             = 1
+no_border_when_single             = 0
 axis_bind_apply_timeout           = 100
 focus_on_activate                 = 1
 idle_inhibit_ignore_visible       = 0
@@ -250,6 +250,7 @@ overlay_color           = 0x14a57cff
 "Super+C" = "setlayout, center_tile"
 "Super+G" = "setlayout, grid"
 "Super+S" = "setlayout, scroller"
+"Super+M" = "setlayout, monocle"
 
 # tag switch
 "Ctrl+Alt+Left"    = "viewtoleft,  0"
