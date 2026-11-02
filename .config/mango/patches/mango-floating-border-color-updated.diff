@@ -1,0 +1,92 @@
+diff -ruN '--exclude=.git' original/assets/config.conf mango/assets/config.conf
+--- original/assets/config.conf	2026-10-29 14:52:36.000000000 +0000
++++ mango/assets/config.conf	2026-10-29 15:01:40.355918770 +0000
+@@ -149,6 +149,7 @@
+ border_px=4
+ root_color=0x201b14ff
+ border_color=0x444444ff
++floating_color=0x89b4faff
+ drop_color=0x8FBA7C55
+ split_color=0xEB441EFF
+ focus_color=0xc9b890ff
+diff -ruN '--exclude=.git' original/docs/visuals/theming.md mango/docs/visuals/theming.md
+--- original/docs/visuals/theming.md	2026-10-29 14:52:36.000000000 +0000
++++ mango/docs/visuals/theming.md	2026-10-29 15:01:40.357277902 +0000
+@@ -26,6 +26,9 @@
+ # Inactive window border
+ border_color=0x444444ff
+ 
++# Floating window border
++floating_color=0x89b4faff
++
+ # Drop shadow when dragging windows
+ drop_color=0x8FBA7C55
+ 
+diff -ruN '--exclude=.git' original/include/mango/config/parse.h mango/include/mango/config/parse.h
+--- original/include/mango/config/parse.h	2026-10-29 14:52:36.000000000 +0000
++++ mango/include/mango/config/parse.h	2026-10-29 15:01:40.358275483 +0000
+@@ -501,6 +501,7 @@
+ 	float special_dim;
+ 	float rootcolor[4];
+ 	float bordercolor[4];
++	float floatingcolor[4];
+ 	float dropcolor[4];
+ 	float splitcolor[4];
+ 	float focuscolor[4];
+diff -ruN '--exclude=.git' original/src/animation/client.c mango/src/animation/client.c
+--- original/src/animation/client.c	2026-10-29 14:52:36.000000000 +0000
++++ mango/src/animation/client.c	2026-10-29 15:01:41.575154427 +0000
+@@ -40,7 +40,8 @@
+ 		return false;
+ 
+ 	if (c->isfullscreen ||
+-		(config.no_radius_when_single && c->mon->visible_tiling_clients == 1))
++		(!c->isfloating && config.no_radius_when_single &&
++		 c->mon->visible_tiling_clients == 1))
+ 		return true;
+ 
+ 	return config.monocle_no_radius && ISFAKETILED(c) && !c->mon->isoverview &&
+diff -ruN '--exclude=.git' original/src/config/option_defs.c mango/src/config/option_defs.c
+--- original/src/config/option_defs.c	2026-10-29 14:52:36.000000000 +0000
++++ mango/src/config/option_defs.c	2026-10-29 15:01:40.359516352 +0000
+@@ -1011,6 +1011,17 @@
+ 		} else {
+ 			convert_hex_to_rgba(config->bordercolor, color);
+ 		}
++	} else if (strcmp(key, "floating_color") == 0) {
++		int64_t color = parse_color(value);
++		if (color == -1) {
++			mango_error(false, WLR_ERROR,
++						"Invalid floatingcolor "
++						"format: \033[1m\033[31m%s\033[0m\n",
++						value);
++			return false;
++		} else {
++			convert_hex_to_rgba(config->floatingcolor, color);
++		}
+ 	} else if (strcmp(key, "drop_color") == 0) {
+ 		int64_t color = parse_color(value);
+ 		if (color == -1) {
+@@ -2690,6 +2701,10 @@
+ 	config.bordercolor[1] = 0x44 / 255.0f;
+ 	config.bordercolor[2] = 0x44 / 255.0f;
+ 	config.bordercolor[3] = 1.0f;
++	config.floatingcolor[0] = 0x89 / 255.0f;
++	config.floatingcolor[1] = 0xb4 / 255.0f;
++	config.floatingcolor[2] = 0xfa / 255.0f;
++	config.floatingcolor[3] = 1.0f;
+ 	config.dropcolor[0] = 0xd5 / 255.0f;
+ 	config.dropcolor[1] = 0x89 / 255.0f;
+ 	config.dropcolor[2] = 0x9d / 255.0f;
+diff -ruN '--exclude=.git' original/src/manage/client.c mango/src/manage/client.c
+--- original/src/manage/client.c	2026-10-29 14:52:36.000000000 +0000
++++ mango/src/manage/client.c	2026-10-29 15:01:40.359918592 +0000
+@@ -1313,6 +1313,8 @@
+ 	} else if (c->ismaximizescreen && server.selected_monitor &&
+ 			   c == server.selected_monitor->sel) {
+ 		return config.maximizescreencolor;
++	} else if (c->isfloating) {
++		return config.floatingcolor;
+ 	} else if (server.selected_monitor && c == server.selected_monitor->sel) {
+ 		return config.focuscolor;
+ 	} else {

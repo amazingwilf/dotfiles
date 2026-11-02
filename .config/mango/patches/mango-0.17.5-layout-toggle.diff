@@ -1,0 +1,90 @@
+diff --git a/include/mango/manage/monitor.h b/include/mango/manage/monitor.h
+index 2b5b839..1752146 100644
+--- a/include/mango/manage/monitor.h
++++ b/include/mango/manage/monitor.h
+@@ -106,6 +106,7 @@ struct Pertag {
+ 	struct DwindleNode *dwindle_root[PERTAG_SLOTS];
+ 	const Layout *config_ltidxs[PERTAG_SLOTS];
+ 	const Layout *ltidxs[PERTAG_SLOTS];
++	const Layout *prev_ltidxs[PERTAG_SLOTS];
+ 	struct TagScrollerState *scroller_state[PERTAG_SLOTS];
+ };
+ 
+diff --git a/src/config/reapply.c b/src/config/reapply.c
+index f7c9e2a..8f36e4e 100644
+--- a/src/config/reapply.c
++++ b/src/config/reapply.c
+@@ -492,8 +492,10 @@ void parse_tagrule(Monitor *m) {
+ 	}
+ 
+ 	for (i = 0; i <= config.tag_num; i++) {
+-		if (prev_config_ltidxs[i] != m->pertag->config_ltidxs[i])
++		if (prev_config_ltidxs[i] != m->pertag->config_ltidxs[i]) {
+ 			m->pertag->ltidxs[i] = m->pertag->config_ltidxs[i];
++			m->pertag->prev_ltidxs[i] = m->pertag->ltidxs[i];
++		}
+ 	}
+ 
+ 	for (i = 1; i <= config.tag_num; i++) {
+diff --git a/src/dispatch/bind.c b/src/dispatch/bind.c
+index 8d28bad..4df1806 100644
+--- a/src/dispatch/bind.c
++++ b/src/dispatch/bind.c
+@@ -905,9 +905,22 @@ int32_t set_layout(const Arg *arg) {
+ 
+ 	for (jk = 0; jk < LENGTH(layouts); jk++) {
+ 		if (strcmp(layouts[jk].name, arg->v) == 0) {
+-			server.selected_monitor->pertag
+-				->ltidxs[get_mon_curtag(server.selected_monitor)] =
+-				&layouts[jk];
++			Monitor *m = server.selected_monitor;
++			uint32_t tag = get_mon_curtag(m);
++			const Layout *current = m->pertag->ltidxs[tag];
++			const Layout *requested = &layouts[jk];
++
++			if (current == requested) {
++				/* Repeating the same binding restores the previous layout. */
++				const Layout *previous = m->pertag->prev_ltidxs[tag];
++				if (!previous || previous == current)
++					return 0;
++				m->pertag->ltidxs[tag] = previous;
++				m->pertag->prev_ltidxs[tag] = current;
++			} else {
++				m->pertag->prev_ltidxs[tag] = current;
++				m->pertag->ltidxs[tag] = requested;
++			}
+ 			clear_fullscreen_and_maximized_state(server.selected_monitor);
+ 			arrange(server.selected_monitor, false, false);
+ 			printstatus(IPC_WATCH_ARRANGGE);
+diff --git a/src/layout/arrange.c b/src/layout/arrange.c
+index 80e6044..823721a 100644
+--- a/src/layout/arrange.c
++++ b/src/layout/arrange.c
+@@ -1300,6 +1300,7 @@ void tag_gather_reset_slot(Monitor *m, uint32_t tag) {
+ 			tag_rule_apply_to_slot(m, tr, tag);
+ 	}
+ 	m->pertag->ltidxs[tag] = m->pertag->config_ltidxs[tag];
++	m->pertag->prev_ltidxs[tag] = m->pertag->ltidxs[tag];
+ }
+ 
+ // move pertag state from src to dst, then reset src.
+@@ -1318,6 +1319,7 @@ void tag_gather_move_pertag(Monitor *m, uint32_t dst, uint32_t src) {
+ 	m->pertag->dwindle_root[dst] = m->pertag->dwindle_root[src];
+ 	m->pertag->config_ltidxs[dst] = m->pertag->config_ltidxs[src];
+ 	m->pertag->ltidxs[dst] = m->pertag->ltidxs[src];
++	m->pertag->prev_ltidxs[dst] = m->pertag->prev_ltidxs[src];
+ 	m->pertag->scroller_state[dst] = m->pertag->scroller_state[src];
+ 	tag_gather_reset_slot(m, src);
+ }
+diff --git a/src/manage/monitor.c b/src/manage/monitor.c
+index cc59fc9..009d166 100644
+--- a/src/manage/monitor.c
++++ b/src/manage/monitor.c
+@@ -802,6 +802,7 @@ void handle_new_output(struct wl_listener *listener, void *data) {
+ 		m->pertag->nmasters[i] = config.default_nmaster;
+ 		m->pertag->mfacts[i] = config.default_mfact;
+ 		m->pertag->ltidxs[i] = &layouts[0];
++		m->pertag->prev_ltidxs[i] = &layouts[0];
+ 	}
+ 
+ 	// Applies the tag rule.

@@ -380,3 +380,7 @@ height = 0.8
 width = 0.8
 title = "Scratchpad"
 
+[[rule.window_rule]]
+app_id = "firefox"
+tags = 2
+
