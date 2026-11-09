@@ -1,7 +1,5 @@
 [global]
 
-exec_once = noctalia
-
 # More option see https://github.com/DreamMaoMao/mango/wiki/
 # Window effect
 blur                   = 1
@@ -170,6 +168,11 @@ overlay_color           = 0x14a57cff
 "Super+space"  = "spawn, fuzzel"
 "Super+Return" = "spawn, ghostty"
 "Super+W"      = "spawn, firefox"
+
+
+
+
+
 
 "Super+grave" = "toggle_named_scratchpad, none, Scratchpad, ghostty --title=Scratchpad"
 
