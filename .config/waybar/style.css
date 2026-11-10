@@ -1,12 +1,12 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Noto Sans, JetBrainsMono Nerd font;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 window#waybar {
     background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
     background-color: #000000;
     transition-property: background-color;
@@ -40,16 +40,11 @@ window#waybar.chromium {
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
+    /* box-shadow: inset 0 -3px transparent; */
     /* Avoid rounded borders under each button name */
-    border: none;
-    border-radius: 0;
+	border: 4px solid rgba(0, 0, 0, 1.0);
 }
 
-button.empty {
-	color: #444444;
-
-}
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
@@ -61,6 +56,7 @@ button:hover {
     color: #ffffff;
 	font-family: JetBrainsMono Nerd Font;
     font-size: 15px;
+	font-weight: bold;
     padding: 0 5px;
 }
 
@@ -72,6 +68,9 @@ button:hover {
     color: #FFFF00;
 }
 
+#layout.VT {
+    color: #c678dd;
+}
 
 
 /* you can set a style on hover for any module like this */
@@ -82,23 +81,23 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: #61afef;
 }
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#workspaces button.focused, #workspaces button.active {
-    background-color: #0000b0;
-    /* box-shadow: inset 0 -3px #ffffff; */
-}
-
-
 #workspaces button.empty {
     color: #444444;
 }
 
+#workspaces button.focused, #workspaces button.active {
+	border-radius: 10px;
+	color: #dbdbdb;
+    background-color: #0000b0;
+    /* box-shadow: inset 0 -3px #ffffff; */
+}
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
@@ -146,7 +145,7 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    color: #61afef;
 }
 
 #battery {
