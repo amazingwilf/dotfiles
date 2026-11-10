@@ -1,0 +1,31 @@
+diff --git a/src/animation/client.c b/src/animation/client.c
+index 34325983..c4a59e96 100644
+--- a/src/animation/client.c
++++ b/src/animation/client.c
+@@ -327,7 +327,7 @@ void client_draw_shadow(Client *c, struct ivec2 offsets) {
+ 			wlr_scene_node_set_enabled(&c->shadow->node, true);
+ 	}
+ 
+-	bool hit_no_border = check_hit_no_border(c);
++	bool hit_no_border = ISTILED(c) && check_hit_no_border(c);
+ 	struct fx_corner_radii current_corner_location =
+ 		c->isfullscreen || (config.no_radius_when_single && c->mon &&
+ 							c->mon->visible_tiling_clients == 1)
+@@ -698,7 +698,7 @@ void client_draw_border(Client *c, struct ivec2 offsets) {
+ 			wlr_scene_node_set_enabled(&c->border->node, true);
+ 	}
+ 
+-	bool hit_no_border = check_hit_no_border(c);
++	bool hit_no_border = ISTILED(c) && check_hit_no_border(c);
+ 	client_draw_split_border(c, hit_no_border, offsets);
+ 
+ 	struct fx_corner_radii current_corner_location =
+@@ -1557,7 +1557,7 @@ void resize_apply(Client *c, struct wlr_box geo, ResizeOpts opts) {
+ 	else if (!c->isfullscreen)
+ 		c->bw = config.borderpx;
+ 
+-	bool hit_no_border = check_hit_no_border(c);
++	bool hit_no_border = ISTILED(c) && check_hit_no_border(c);
+ 	if (hit_no_border) {
+ 		c->bw = 0;
+ 		c->fake_no_border = true;
